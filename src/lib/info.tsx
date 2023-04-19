@@ -6,8 +6,14 @@ export const avatar = me
 export const about = () => {
   return (
     <>
-      Hey, I&rsquo;m Imanol, <b>Front-end Developer at Easytechgreen</b>. Before
-      that, I was a graphic designer, digital marketing manager and a
+      Hi, I&rsquo;m Imanol,{' '}
+      <b>
+        Front-end Developer at{' '}
+        <a href="https://easytechgreen.com/" rel="noopener noreferrer" target="_blank">
+          Easytechgreen
+        </a>
+      </b>
+      . Before that, I was a graphic designer, digital marketing manager and a
       Communication Social Bachelor&rsquo;s degree student.
     </>
   )
