@@ -1,6 +1,6 @@
 import me from '@/app/avatar.jpg'
 
-export const siteUrl = 'https://imanol.vercel.app'
+export const siteUrl = process.env.URL
 export const name = 'Imanol Ortega'
 export const avatar = me
 export const about = () => {
