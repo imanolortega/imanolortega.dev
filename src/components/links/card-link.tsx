@@ -1,5 +1,3 @@
-'use client'
-
 import { ArrowIcon } from '@/components/icons'
 
 interface ButtonProps {

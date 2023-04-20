@@ -1,5 +1,3 @@
-'use client'
-
 import { Space_Grotesk } from 'next/font/google'
 const space = Space_Grotesk({ subsets: ['latin'] })
 

@@ -45,7 +45,7 @@ export default function Aside() {
                   key={path}
                   href={path}
                   className={clsx(
-                    'transition-all hover:text-slate-800 dark:hover:text-slate-200 flex align-middle',
+                    'transition-all hover:text-slate-800 dark:hover:text-slate-200 flex align-middle mb-1',
                     {
                       'text-slate-500': !isActive,
                       'font-semibold': isActive,
