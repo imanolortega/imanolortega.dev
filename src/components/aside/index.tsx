@@ -25,10 +25,7 @@ function Avatar() {
 }
 
 export default function Aside() {
-  let pathname = usePathname() || '/'
-  if (pathname.includes('/blog/')) {
-    pathname = '/blog'
-  }
+  const pathname = usePathname() || '/'
 
   return (
     <aside className="md:w-[150px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0 font-serif">
