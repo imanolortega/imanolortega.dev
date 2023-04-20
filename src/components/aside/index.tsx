@@ -1,6 +1,6 @@
 'use client'
 
-import { avatar, name } from '@/lib/info'
+import { avatar, name, navItems } from '@/lib/info'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import Link from 'next/link'
@@ -8,15 +8,6 @@ import Image from 'next/image'
 
 import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
-
-const navItems = {
-  '/': {
-    name: 'home',
-  },
-  '/about': {
-    name: 'about',
-  },
-}
 
 function Avatar() {
   return (
@@ -42,7 +33,7 @@ export default function Aside() {
   return (
     <aside className="md:w-[150px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0 font-serif">
       <div className="lg:sticky lg:top-20">
-        <div className="flex flex-col md:flex-row items-start mb-4 px-4 md:px-0">
+        <div className="flex flex-col md:flex-row items-start mb-4 px-6 md:px-0">
           <Avatar />
         </div>
         <nav
@@ -50,7 +41,7 @@ export default function Aside() {
           id="nav"
         >
           <div className="flex flex-row md:flex-col space-x-0 pr-10 mb-2 mt-2 md:mt-0">
-            {Object.entries(navItems).map(([path, { name }]) => {
+            {navItems.map(({ name, path }) => {
               const isActive = path === pathname
               return (
                 <Link

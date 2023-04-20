@@ -1,15 +1,21 @@
 import me from '@/app/avatar.jpg'
+import { EmailIcon, GitHubIcon, LinkedinIcon } from '@/components/icons'
 
 export const siteUrl = process.env.URL
 export const name = 'Imanol Ortega'
 export const avatar = me
+
 export const about = () => {
   return (
     <>
       Hi, I&rsquo;m Imanol,{' '}
       <b>
         Front-end Developer at{' '}
-        <a href="https://easytechgreen.com/" rel="noopener noreferrer" target="_blank">
+        <a
+          href="https://easytechgreen.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           Easytechgreen
         </a>
       </b>
@@ -18,6 +24,7 @@ export const about = () => {
     </>
   )
 }
+
 export const bio = () => {
   return (
     <>
@@ -29,6 +36,7 @@ export const bio = () => {
     </>
   )
 }
+
 export const technologies = () => {
   return (
     <>
@@ -39,6 +47,7 @@ export const technologies = () => {
     </>
   )
 }
+
 export const interest = () => {
   return (
     <>
@@ -48,3 +57,62 @@ export const interest = () => {
     </>
   )
 }
+
+export const projects = () => {
+  return (
+    <>
+      In the beginning, I worked on projects with React (and some with Vue).
+      Clones, challenges, API consumption, Firebase authentication, Firebase or
+      Google Sheets database, and so on. The last projects I worked on were
+      &quot;personal tools&quot;, challenges and testing new technologies.
+    </>
+  )
+}
+
+export const projectsList = [
+  {
+    title: 'Más Canales',
+    link: 'https://mascanales.net/',
+  },
+  {
+    title: 'Last Challenge',
+    link: 'https://challenge-imanolrtega.vercel.app/',
+  },
+  {
+    title: 'More Projects',
+    link: 'https://github.com/imanolrtega',
+  },
+]
+
+export const aboutLinks = [
+  {
+    title: 'Email',
+    link: 'mailto:imanolrtega@gmail.com',
+    icon: <EmailIcon />,
+  },
+  {
+    title: 'GitHub',
+    link: 'https://github.com/imanolrtega',
+    icon: <GitHubIcon />,
+  },
+  {
+    title: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/imanol-rtega/',
+    icon: <LinkedinIcon />,
+  },
+]
+
+export const navItems = [
+  {
+    name: 'Home',
+    path: '/',
+  },
+  {
+    name: 'About',
+    path: '/about',
+  },
+  {
+    name: 'Projects',
+    path: '/projects',
+  },
+]

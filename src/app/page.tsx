@@ -1,12 +1,13 @@
-import { ArrowIcon } from '@/components/icons/icons'
+import { ArrowIcon } from '@/components/icons'
+import { CustomLink } from '@/components/links/custom-link'
 import { name, about, bio } from '@/lib/info'
-import Paragraph from '@/components/paragraph/paragraph'
-import Title from '@/components/heading/heading'
+import Heading from '@/components/heading'
+import Paragraph from '@/components/paragraph'
 
 export default async function HomePage() {
   return (
     <section>
-      <Title>{name}</Title>
+      <Heading>{name}</Heading>
       <div>
         <Paragraph>{about()}</Paragraph>
         <Paragraph>{bio()}</Paragraph>
@@ -14,26 +15,22 @@ export default async function HomePage() {
       <div>
         <ul className="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-slate-500 dark:text-slate-400 mb-8">
           <li>
-            <a
-              className="flex items-center hover:text-slate-700 dark:hover:text-slate-200 transition-all"
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://www.linkedin.com/in/imanol-rtega/"
-            >
-              <ArrowIcon />
-              <p className="h-7">add me on linkedin</p>
-            </a>
-          </li>
-          <li>
-            <a
-              className="flex items-center hover:text-slate-700 dark:hover:text-slate-200 transition-all"
-              rel="noopener noreferrer"
-              target="_blank"
-              href="mailto:imanolrtega@gmail.com"
-            >
+            <CustomLink href="mailto:imanolrtega@gmail.com" type="external">
               <ArrowIcon />
               <p className="h-7">send me an email</p>
-            </a>
+            </CustomLink>
+          </li>
+          <li>
+            <CustomLink href="/projects">
+              <ArrowIcon />
+              <p className="h-7">check my projects</p>
+            </CustomLink>
+          </li>
+          <li>
+            <CustomLink href="/about">
+              <ArrowIcon />
+              <p className="h-7">more about me</p>
+            </CustomLink>
           </li>
         </ul>
       </div>
