@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 :root {
+  --tw-bg-opacity: 1;
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: rgb(241 245 249 / var(--tw-bg-opacity));
+  --background-end-rgb: rgb(248 250 252 / var(--tw-bg-opacity));
 }
 
 @media (prefers-color-scheme: dark) {

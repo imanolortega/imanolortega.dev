@@ -56,7 +56,7 @@ export default function Aside() {
                   <span className="text-base relative py-[5px] px-[10px]">
                     {name}
                     {path === pathname ? (
-                      <div className="absolute inset-0 bg-slate-100 dark:bg-slate-800 rounded-md z-[-1]" />
+                      <div className="absolute inset-0 bg-slate-200 dark:bg-slate-800 rounded-md z-[-1]" />
                     ) : null}
                   </span>
                 </Link>
