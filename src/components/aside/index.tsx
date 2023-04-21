@@ -53,7 +53,7 @@ export default function Aside() {
   }
 
   return (
-    <aside className="md:w-[150px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0 font-serif">
+    <aside className="md:w-[150px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0">
       <div className="lg:sticky lg:top-20">
         <div className="flex flex-col md:flex-row items-start mb-4 px-6 md:px-0">
           <Avatar />
@@ -75,7 +75,6 @@ export default function Aside() {
                         'text-slate-500': !isActive,
                         'font-semibold': isActive,
                       },
-                      inter.className,
                     )}
                   >
                     <span className="text-base relative py-[5px] px-[10px]">

@@ -5,21 +5,25 @@ export function useSystemColorMode() {
 
   useEffect(() => {
     const handler = () => setSystemColorMode(getSystemColorMode())
-    window
-      .matchMedia('(prefers-color-scheme: dark)')
-      .addEventListener('change', handler)
-    return () =>
+
+    if (typeof window !== 'undefined') {
       window
         .matchMedia('(prefers-color-scheme: dark)')
-        .removeEventListener('change', handler)
+        .addEventListener('change', handler)
+
+      return () =>
+        window
+          .matchMedia('(prefers-color-scheme: dark)')
+          .removeEventListener('change', handler)
+    }
   }, [])
 
   return systemColorMode
 }
 
-function getSystemColorMode(): boolean {
-  return (
-    window?.matchMedia &&
-    window?.matchMedia('(prefers-color-scheme: dark)').matches
-  )
+function getSystemColorMode() {
+  if (typeof window !== 'undefined' && window.matchMedia) {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+  }
+  return false
 }
