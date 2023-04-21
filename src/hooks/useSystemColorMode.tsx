@@ -14,12 +14,12 @@ export function useSystemColorMode() {
         .removeEventListener('change', handler)
   }, [])
 
-  return [systemColorMode]
+  return systemColorMode
 }
 
 function getSystemColorMode(): boolean {
   return (
-    window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches
+    window?.matchMedia &&
+    window?.matchMedia('(prefers-color-scheme: dark)').matches
   )
 }

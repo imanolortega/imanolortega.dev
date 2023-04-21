@@ -1,15 +1,15 @@
 'use client'
 
 import { avatar, name, navItems } from '@/lib/info'
+import { LigthIcon, NigthIcon } from '@/components/icons'
+import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
+import { useSystemColorMode } from '@/hooks/useSystemColorMode'
 import clsx from 'clsx'
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { Inter } from 'next/font/google'
-import { useEffect, useState } from 'react'
-import { useSystemColorMode } from '@/hooks/useSystemColorMode'
-import { LigthIcon, NigthIcon } from '@/components/icons'
 const inter = Inter({ subsets: ['latin'] })
 
 function Avatar() {
@@ -30,7 +30,7 @@ function Avatar() {
 export default function Aside() {
   const pathname = usePathname() || '/'
   const [darkMode, setDarkMode] = useState(false)
-  const [systemColorMode] = useSystemColorMode()
+  const systemColorMode = useSystemColorMode()
 
   useEffect(() => {
     const storedValue = localStorage.getItem('darkMode')
@@ -66,7 +66,7 @@ export default function Aside() {
             {navItems.map(({ name, path }) => {
               const isActive = path === pathname
               return (
-                <li key={path}>
+                <li className="flex items-center" key={path}>
                   <Link
                     href={path}
                     className={clsx(
@@ -81,16 +81,16 @@ export default function Aside() {
                     <span className="text-base relative py-[5px] px-[10px]">
                       {name}
                       {path === pathname ? (
-                        <div className="absolute inset-0 bg-slate-100 dark:bg-slate-800 rounded-md z-[-1]" />
+                        <div className="absolute inset-0 bg-slate-200 dark:bg-slate-800 rounded-md z-[-1]" />
                       ) : null}
                     </span>
                   </Link>
                 </li>
               )
             })}
-            <li className="flex justify-center text-slate-50 dark:text-slate-300 dark:hover:text-slate-200">
+            <li className="flex items-center pb-1 md:pb-0">
               <button className="h-10 w-10" onClick={handleDarkModeToggle}>
-                <span className="flex items-center justify-center">
+                <span className="flex items-center justify-center text-slate-400 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-200">
                   {darkMode ? <LigthIcon /> : <NigthIcon />}
                 </span>
               </button>
