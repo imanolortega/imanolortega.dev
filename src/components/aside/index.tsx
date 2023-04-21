@@ -88,7 +88,11 @@ export default function Aside() {
               )
             })}
             <li className="flex items-center pb-1 md:pb-0">
-              <button className="h-10 w-10" onClick={handleDarkModeToggle}>
+              <button
+                className="h-10 w-10"
+                onClick={handleDarkModeToggle}
+                title={darkMode ? 'Light mode' : 'Dark mode'}
+                >
                 <span className="flex items-center justify-center text-slate-400 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-200">
                   {darkMode ? <LigthIcon /> : <NigthIcon />}
                 </span>

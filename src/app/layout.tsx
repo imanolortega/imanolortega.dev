@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   description: 'Developer, writer, and designer.',
   openGraph: {
-    title: 'Imanol Ortega - Front-end Developer',
+    title: 'Imanol Ortega | Front-end Developer',
     description: 'Front-end Developer and designer.',
     url: siteUrl,
     siteName: 'Imanol Ortega',
