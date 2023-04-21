@@ -42,7 +42,7 @@ export const technologies = () => {
     <>
       I work with NextJS on the Frontend and usually with some CMS (headless or
       not) on the Backend. I use JavaScript or TypeScript depending on the
-      project. I also worked with Vue JS and React Native. My focus today is on
+      project. I also worked with VueJS and React Native. My focus today is on
       the user experience: fast, intuitive, and accessible websites.
     </>
   )

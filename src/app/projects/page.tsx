@@ -16,7 +16,7 @@ export default function ProjectsPage() {
         <Paragraph>{projects()}</Paragraph>
         <div className="flex flex-col gap-2 md:flex-row md:gap-2 my-8">
           {projectsList.map(({ title, link }) => (
-            <CardLink href={link} key={title}>
+            <CardLink href={link} key={link}>
               {title}
             </CardLink>
           ))}

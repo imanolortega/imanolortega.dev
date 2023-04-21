@@ -17,7 +17,7 @@ export default function AboutPage() {
         <Paragraph>{interest()}</Paragraph>
         <div className="flex flex-col gap-2 md:flex-row md:gap-2 my-8">
           {aboutLinks.map(({ title, link, icon }) => (
-            <CardLink href={link} key={title}>
+            <CardLink href={link} key={link}>
               {icon}
               <div className="ml-3">{title}</div>
             </CardLink>
