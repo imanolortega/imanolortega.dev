@@ -1,10 +1,13 @@
-import Aside from '@/components/aside'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import { Metadata } from 'next'
+import { siteUrl } from '@/lib/info'
+import Aside from '@/components/aside'
+import Head from 'next/head'
+import Script from 'next/script'
+
 
 import { Inter } from 'next/font/google'
-import { siteUrl } from '@/lib/info'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -51,6 +54,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+      <Script id="g-analytics">
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+          page_path: window.location.pathname,
+        });;
+      `}
+      </Script>
       <body className="antialiased max-w-4xl mb-40 flex flex-col md:flex-row mx-4 mt-8 md:mt-20 lg:mt-32 lg:mx-auto">
         <Aside />
         <main className="flex-auto min-w-0 mt-6 md:mt-0 flex flex-col px-2 md:px-0">

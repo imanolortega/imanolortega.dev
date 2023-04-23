@@ -9,9 +9,6 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Inter } from 'next/font/google'
-const inter = Inter({ subsets: ['latin'] })
-
 function Avatar() {
   return (
     <Link aria-label="Imanol Ortega" href="/">
@@ -62,7 +59,7 @@ export default function Aside() {
           className="flex flex-row md:flex-col items-start relative px-4 md:px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
           id="nav"
         >
-          <ul className="flex flex-row md:flex-col space-x-0 pr-10 mb-2 mt-2 md:mt-0">
+          <ul className="space-x-2 md:space-x-0 flex flex-row md:flex-col pr-10 mb-2 mt-2 md:mt-0">
             {navItems.map(({ name, path }) => {
               const isActive = path === pathname
               return (
