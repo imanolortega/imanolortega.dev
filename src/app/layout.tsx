@@ -3,9 +3,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { Metadata } from 'next'
 import { siteUrl } from '@/lib/info'
 import Aside from '@/components/aside'
-import Head from 'next/head'
 import Script from 'next/script'
-
 
 import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
