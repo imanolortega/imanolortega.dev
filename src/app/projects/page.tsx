@@ -14,8 +14,15 @@ export default function ProjectsPage() {
       <Heading>Projects</Heading>
       <div className=" text-slate-800 dark:text-slate-20">
         <Paragraph>{projects()}</Paragraph>
-        <div className="flex flex-col gap-2 md:flex-row md:gap-2 my-8">
-          {projectsList.map(({ title, link }) => (
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-2 mt-8 mb-2">
+          {projectsList.slice(0, 3).map(({ title, link }) => (
+            <CardLink href={link} key={link}>
+              {title}
+            </CardLink>
+          ))}
+        </div>
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-2 mb-8">
+          {projectsList.slice(3, 6).map(({ title, link }) => (
             <CardLink href={link} key={link}>
               {title}
             </CardLink>

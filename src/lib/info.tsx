@@ -40,10 +40,19 @@ export const bio = () => {
 export const technologies = () => {
   return (
     <>
-      I work with NextJS on the Frontend and usually with some CMS (headless or
+      Working with NextJS on the Frontend and usually with some CMS (headless or
       not) on the Backend. I use JavaScript or TypeScript depending on the
-      project. I also worked with VueJS and React Native. My focus today is on
-      the user experience: fast, intuitive, and accessible websites.
+      project. I have also worked with VueJS and React Native. My focus today is
+      on the user experience: fast, intuitive, and accessible websites.
+    </>
+  )
+}
+
+export const introAbout = () => {
+  return (
+    <>
+      I&rsquo;m a Front-end Developer obsessed with the web. Currently, I live
+      in Puerto Madryn, Argentina.
     </>
   )
 }
@@ -79,6 +88,18 @@ export const projectsList = [
     link: 'https://challenge-imanolrtega.vercel.app/',
   },
   {
+    title: 'Facebook Clone',
+    link: 'https://clone-sepia.vercel.app/',
+  },
+  {
+    title: 'Twitter Clone',
+    link: 'https://vuejs-firebase-2e83a.web.app/',
+  },
+  {
+    title: 'Covid Tracker',
+    link: 'https://covid-tracker-vue.vercel.app/',
+  },
+  {
     title: 'More Projects',
     link: 'https://github.com/imanolrtega',
   },
@@ -99,6 +120,24 @@ export const aboutLinks = [
     title: 'LinkedIn',
     link: 'https://www.linkedin.com/in/imanol-rtega/',
     icon: <LinkedinIcon />,
+  },
+]
+
+export const homeLinks = [
+  {
+    text: 'more about me',
+    link: '/about',
+    type: 'internal',
+  },
+  {
+    text: 'check my projects',
+    link: '/projects',
+    type: 'internal',
+  },
+  {
+    text: 'send me an email',
+    link: 'mailto:imanolrtega@gmail.com',
+    type: 'external',
   },
 ]
 

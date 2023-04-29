@@ -3,7 +3,7 @@ import Link from 'next/link'
 interface CustomLinkProps {
   children: React.ReactNode
   href: string
-  type?: 'external'
+  type: string
 }
 
 export function CustomLink({ href, children, type }: CustomLinkProps) {

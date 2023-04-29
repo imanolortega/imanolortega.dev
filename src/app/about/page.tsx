@@ -1,4 +1,4 @@
-import { aboutLinks, interest, technologies } from '@/lib/info'
+import { aboutLinks, interest, introAbout, technologies } from '@/lib/info'
 import { CardLink } from '@/components/links/card-link'
 import Heading from '@/components/heading'
 import Paragraph from '@/components/paragraph'
@@ -13,6 +13,7 @@ export default function AboutPage() {
     <section>
       <Heading>About Me</Heading>
       <div className="prose prose-slate dark:prose-invert text-slate-800 dark:text-slate-20">
+        <Paragraph>{introAbout()}</Paragraph>
         <Paragraph>{technologies()}</Paragraph>
         <Paragraph>{interest()}</Paragraph>
         <div className="flex flex-col gap-2 md:flex-row md:gap-2 my-8">
