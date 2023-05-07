@@ -88,12 +88,12 @@ export const projectsList = [
     link: 'https://challenge-imanolrtega.vercel.app/',
   },
   {
-    title: 'Facebook Clone',
-    link: 'https://clone-sepia.vercel.app/',
+    title: 'MacOS Dock',
+    link: 'https://mac-dock.vercel.app/',
   },
   {
-    title: 'Twitter Clone',
-    link: 'https://vuejs-firebase-2e83a.web.app/',
+    title: 'Facebook Clone',
+    link: 'https://clone-sepia.vercel.app/',
   },
   {
     title: 'Covid Tracker',
