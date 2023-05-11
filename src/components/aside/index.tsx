@@ -1,13 +1,12 @@
 'use client'
 
 import { avatar, name, navItems } from '@/lib/info'
-import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { useSystemColorMode } from '@/hooks/useSystemColorMode'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
 import ToggleTheme from '../toggle-theme'
+import useMobile from '@/hooks/useMobile'
 
 function Avatar() {
   return (
@@ -26,6 +25,7 @@ function Avatar() {
 
 export default function Aside() {
   const pathname = usePathname() || '/'
+  const isMobile = useMobile()
 
   return (
     <aside className="md:w-[150px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0">
@@ -65,9 +65,11 @@ export default function Aside() {
                 </li>
               )
             })}
-            <li className="flex md:hidden items-center pb-1 md:pb-0">
-              <ToggleTheme />
-            </li>
+            {isMobile && (
+              <li className="flex md:hidden items-center pb-1 md:pb-0">
+                <ToggleTheme />
+              </li>
+            )}
           </ul>
         </nav>
       </div>
