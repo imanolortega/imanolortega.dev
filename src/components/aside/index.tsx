@@ -1,13 +1,13 @@
 'use client'
 
 import { avatar, name, navItems } from '@/lib/info'
-import { LigthIcon, NigthIcon } from '@/components/icons'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { useSystemColorMode } from '@/hooks/useSystemColorMode'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
+import ToggleTheme from '../toggle-theme'
 
 function Avatar() {
   return (
@@ -26,28 +26,6 @@ function Avatar() {
 
 export default function Aside() {
   const pathname = usePathname() || '/'
-  const [darkMode, setDarkMode] = useState(false)
-  const systemColorMode = useSystemColorMode()
-
-  useEffect(() => {
-    const storedValue = localStorage.getItem('darkMode')
-    if (storedValue !== null) {
-      setDarkMode(storedValue === 'true')
-    } else {
-      setDarkMode(
-        typeof systemColorMode === 'boolean' ? systemColorMode : false,
-      )
-    }
-  }, [systemColorMode])
-
-  useEffect(() => {
-    localStorage.setItem('darkMode', darkMode.toString())
-    document.body.classList.toggle('dark', darkMode)
-  }, [darkMode])
-
-  const handleDarkModeToggle = () => {
-    setDarkMode(!darkMode)
-  }
 
   return (
     <aside className="md:w-[150px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0">
@@ -77,23 +55,18 @@ export default function Aside() {
                     <span className="text-base relative py-[5px] px-[10px]">
                       {name}
                       {path === pathname ? (
-                        <div className="absolute inset-0 bg-slate-200 dark:bg-slate-800 rounded-md z-[-1]" />
+                        <div
+                          className="absolute inset-0 ring-slate-300 hover:ring-1 dark:ring-slate-600
+                        text-slate-400 hover:text-slate-600 rounded-md z-[-1]"
+                        />
                       ) : null}
                     </span>
                   </Link>
                 </li>
               )
             })}
-            <li className="flex items-center pb-1 md:pb-0">
-              <button
-                className="h-10 w-10"
-                onClick={handleDarkModeToggle}
-                title={darkMode ? 'Light mode' : 'Dark mode'}
-              >
-                <span className="flex items-center justify-center text-slate-400 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-200">
-                  {darkMode ? <LigthIcon /> : <NigthIcon />}
-                </span>
-              </button>
+            <li className="flex md:hidden items-center pb-1 md:pb-0">
+              <ToggleTheme />
             </li>
           </ul>
         </nav>

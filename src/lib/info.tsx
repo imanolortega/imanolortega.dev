@@ -84,12 +84,12 @@ export const projectsList = [
     link: 'https://mascanales.net/',
   },
   {
-    title: 'Last Challenge',
-    link: 'https://challenge-imanolrtega.vercel.app/',
-  },
-  {
     title: 'MacOS Dock',
     link: 'https://mac-dock.vercel.app/',
+  },
+  {
+    title: 'Last Challenge',
+    link: 'https://challenge-imanolrtega.vercel.app/',
   },
   {
     title: 'Facebook Clone',
