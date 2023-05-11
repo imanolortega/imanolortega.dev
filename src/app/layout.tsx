@@ -1,25 +1,25 @@
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
+import { description, siteUrl, title } from '@/lib/info'
 import { Metadata } from 'next'
-import { siteUrl } from '@/lib/info'
 import Aside from '@/components/aside'
 import Script from 'next/script'
+import TopButtons from '@/components/top-buttons'
 
 import { Inter } from 'next/font/google'
-import TopButtons from '@/components/top-buttons'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Imanol Ortega | Front-end Developer',
+    default: title,
     template: '%s | Imanol Ortega',
   },
-  description: 'Developer, writer, and designer.',
+  description: description,
   openGraph: {
-    title: 'Imanol Ortega | Front-end Developer',
-    description: 'Front-end Developer and designer.',
+    title: title,
+    description: description,
     url: siteUrl,
-    siteName: 'Imanol Ortega',
+    siteName: title,
     images: [
       {
         url: `${siteUrl}/og.jpg`,

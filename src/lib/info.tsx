@@ -4,6 +4,9 @@ import { EmailIcon, GitHubIcon, LinkedinIcon } from '@/components/icons'
 export const siteUrl = process.env.URL
 export const name = 'Imanol Ortega'
 export const avatar = me
+export const title = 'Imanol Ortega | Front-end Developer'
+export const description =
+  'I am a Front-end Developer and designer based in Puerto Madryn, Argentina. I mainly work with NextJS, TypeScript and SCSS. My focus today is on the user experience: fast, intuitive and accessible websites.'
 
 export const about = () => {
   return (
