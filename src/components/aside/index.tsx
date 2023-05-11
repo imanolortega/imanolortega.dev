@@ -37,7 +37,7 @@ export default function Aside() {
           className="flex flex-row md:flex-col items-start relative px-4 md:px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
           id="nav"
         >
-          <ul className="space-x-2 md:space-x-0 flex flex-row md:flex-col pr-10 mb-2 mt-2 md:mt-0">
+          <ul className="space-x-1 md:space-x-0 flex flex-row md:flex-col pr-10 mb-2 mt-2 md:mt-0">
             {navItems.map(({ name, path }) => {
               const isActive = path === pathname
               return (
@@ -45,7 +45,7 @@ export default function Aside() {
                   <Link
                     href={path}
                     className={clsx(
-                      'transition-all hover:text-slate-800 dark:hover:text-slate-200 flex align-middle mb-1',
+                      'transition-all hover:text-slate-800 dark:hover:text-slate-200 flex align-middle',
                       {
                         'text-slate-500': !isActive,
                         'font-semibold': isActive,
@@ -56,8 +56,10 @@ export default function Aside() {
                       {name}
                       {path === pathname ? (
                         <div
-                          className="absolute inset-0 ring-slate-300 hover:ring-1 dark:ring-slate-600
-                        text-slate-400 hover:text-slate-600 rounded-md z-[-1]"
+                          className="absolute inset-0
+                          ring-slate-300 hover:ring-1 dark:ring-slate-600
+                          text-slate-400 hover:text-slate-600
+                          rounded-md z-[-1]"
                         />
                       ) : null}
                     </span>
@@ -66,7 +68,7 @@ export default function Aside() {
               )
             })}
             {isMobile && (
-              <li className="flex md:hidden items-center pb-1 md:pb-0">
+              <li className="flex md:hidden items-center">
                 <ToggleTheme />
               </li>
             )}

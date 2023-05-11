@@ -30,13 +30,7 @@ export default function ToggleTheme() {
 
   return (
     <button
-      className="
-      w-8 h-8 rounded-lg
-      flex items-center justify-center
-      opacity-75 hover:opacity-100
-      text-slate-400 hover:text-slate-600
-      dark:text-slate-400 dark:hover:text-slate-200
-      transition-all cursor-pointer"
+      className="top-button"
       onClick={handleDarkModeToggle}
       title={darkMode ? 'Light mode' : 'Dark mode'}
     >
