@@ -6,7 +6,6 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
 import ToggleTheme from '../toggle-theme'
-import useMobile from '@/hooks/useMobile'
 
 function Avatar() {
   return (
@@ -23,9 +22,13 @@ function Avatar() {
   )
 }
 
-export default function Aside() {
+interface AsideProps {
+  darkMode: boolean
+  handleDarkModeToggle: () => void
+}
+
+export default function Aside({ darkMode, handleDarkModeToggle }: AsideProps) {
   const pathname = usePathname() || '/'
-  const isMobile = useMobile()
 
   return (
     <aside className="md:w-[150px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0">
@@ -67,11 +70,12 @@ export default function Aside() {
                 </li>
               )
             })}
-            {isMobile && (
-              <li className="flex md:hidden items-center">
-                <ToggleTheme />
-              </li>
-            )}
+            <li className="flex md:hidden items-center">
+              <ToggleTheme
+                darkMode={darkMode}
+                handleDarkModeToggle={handleDarkModeToggle}
+              />
+            </li>
           </ul>
         </nav>
       </div>
