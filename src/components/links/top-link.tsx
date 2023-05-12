@@ -1,8 +1,5 @@
-interface TopLinkProps {
-  children: React.ReactNode
-  href: string
-  title: string
-}
+import { TopLinkProps } from '@/lib/interfaces'
+
 export default function TopLink({ children, href, title }: TopLinkProps) {
   return (
     <a

@@ -1,14 +1,11 @@
 'use client'
 
-import { useSystemColorMode } from '@/hooks/useSystemColorMode'
+import { Analytics } from '@vercel/analytics/react'
+import { MainLayoutProps } from '@/lib/interfaces'
 import { useEffect, useState } from 'react'
+import { useSystemColorMode } from '@/hooks/useSystemColorMode'
 import Aside from '@/components/aside'
 import TopButtons from '@/components/top-buttons'
-import { Analytics } from '@vercel/analytics/react'
-
-interface MainLayoutProps {
-  children: React.ReactNode
-}
 
 export default function MainLayout({ children }: MainLayoutProps) {
   const [darkMode, setDarkMode] = useState(false)

@@ -1,6 +1,7 @@
 'use client'
 
 import { avatar, name, navItems } from '@/lib/info'
+import { DarkModeProps } from '@/lib/interfaces'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import Image from 'next/image'
@@ -22,12 +23,10 @@ function Avatar() {
   )
 }
 
-interface AsideProps {
-  darkMode: boolean
-  handleDarkModeToggle: () => void
-}
-
-export default function Aside({ darkMode, handleDarkModeToggle }: AsideProps) {
+export default function Aside({
+  darkMode,
+  handleDarkModeToggle,
+}: DarkModeProps) {
   const pathname = usePathname() || '/'
 
   return (

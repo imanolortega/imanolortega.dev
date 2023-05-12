@@ -1,10 +1,5 @@
+import { CustomLinkProps } from '@/lib/interfaces'
 import Link from 'next/link'
-
-interface CustomLinkProps {
-  children: React.ReactNode
-  href: string
-  type: string
-}
 
 export function CustomLink({ href, children, type }: CustomLinkProps) {
   const isExternal = type === 'external'

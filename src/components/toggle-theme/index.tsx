@@ -1,13 +1,10 @@
+import { DarkModeProps } from '@/lib/interfaces'
 import { LigthIcon, NigthIcon } from '@/components/icons'
-interface ToggleThemeProps {
-  darkMode: boolean
-  handleDarkModeToggle: () => void
-}
 
 export default function ToggleTheme({
   darkMode,
   handleDarkModeToggle,
-}: ToggleThemeProps) {
+}: DarkModeProps) {
   return (
     <button
       className="top-button"

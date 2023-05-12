@@ -1,9 +1,5 @@
 import { ArrowIcon } from '@/components/icons'
-
-interface ButtonProps {
-  href: string
-  children: React.ReactNode
-}
+import { ButtonProps } from '@/lib/interfaces'
 
 export function CardLink({ href, children }: ButtonProps) {
   return (

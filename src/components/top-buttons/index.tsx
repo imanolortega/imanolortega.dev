@@ -1,15 +1,12 @@
+import { DarkModeProps } from '@/lib/interfaces'
 import { EmailIcon, GitHubIcon, LinkedinIcon } from '@/components/icons'
-import TopLink from '@/components/links/top-link'
 import ToggleTheme from '@/components/toggle-theme'
-interface TopButtonsProps {
-  darkMode: boolean
-  handleDarkModeToggle: () => void
-}
+import TopLink from '@/components/links/top-link'
 
 export default function TopButtons({
   darkMode,
   handleDarkModeToggle,
-}: TopButtonsProps) {
+}: DarkModeProps) {
   return (
     <nav>
       <ul className="hidden justify-end gap-2 md:flex mb-2">

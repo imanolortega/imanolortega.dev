@@ -13,13 +13,12 @@ export const about = () => {
     <>
       Hi, I&rsquo;m Imanol,{' '}
       <b>
-        Front-end Developer at{' '}
         <a
           href="https://easytechgreen.com/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          Easytechgreen
+          Front-end Developer at Easytechgreen
         </a>
       </b>
       . Before that, I was a graphic designer, digital marketing manager and a
