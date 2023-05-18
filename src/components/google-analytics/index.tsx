@@ -1,31 +1,21 @@
-'use client'
-import { useEffect, useState } from 'react'
+import Script from 'next/script'
 
 export default function GoogleAnalytics() {
-  const [hasMounted, setHasMounted] = useState(false)
-
-  useEffect(() => {
-    setHasMounted(true)
-  }, [])
-
-  if (!hasMounted) {
-    return null
-  }
   return (
-    <head>
-      <script
+    <>
+      <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-        async
       />
-      <script id="google-analytics">
+      <Script id="g-analytics">
         {`
         window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag("js", new Date());
-
-          gtag("config", ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});
-        `}
-      </script>
-    </head>
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+          page_path: window.location.pathname,
+        });;
+      `}
+      </Script>
+    </>
   )
 }
