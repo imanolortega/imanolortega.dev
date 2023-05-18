@@ -1,8 +1,8 @@
 import './globals.css'
 import { description, siteUrl, title } from '@/lib/info'
 import { Metadata } from 'next'
+import GoogleAnalytics from '@/components/google-analytics'
 import MainLayout from '@/components/main-layout'
-import Script from 'next/script'
 
 import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
@@ -51,19 +51,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
-      <Script id="g-analytics">
-        {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-          page_path: window.location.pathname,
-        });;
-      `}
-      </Script>
+      <GoogleAnalytics />
       <body className="antialiased max-w-4xl mb-40 flex flex-col md:flex-row mx-4 mt-8 md:mt-20 lg:mt-32 lg:mx-auto">
         <MainLayout>{children}</MainLayout>
       </body>
