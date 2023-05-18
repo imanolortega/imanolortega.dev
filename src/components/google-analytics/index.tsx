@@ -15,9 +15,9 @@ export default function GoogleAnalytics() {
     <head>
       <script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-        defer
+        async
       />
-      <script id="google-analytics" defer>
+      <script id="google-analytics">
         {`
         window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
