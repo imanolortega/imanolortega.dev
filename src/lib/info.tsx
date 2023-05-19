@@ -74,7 +74,7 @@ export const projects = () => {
     <>
       In the beginning, I worked on projects with React (and some with Vue).
       Clones, challenges, API consumption, Firebase authentication, Firebase or
-      Google Sheets database, and so on. The last projects I worked on were
+      Google Sheets database, and so on. The latest projects I worked on were
       &quot;personal tools&quot;, challenges and testing new technologies.
     </>
   )
