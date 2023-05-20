@@ -1,4 +1,4 @@
-import { CustomLinkProps } from '@/lib/interfaces'
+import { CustomLinkProps } from '@/utils/interfaces'
 import Link from 'next/link'
 
 export function CustomLink({ href, children, type }: CustomLinkProps) {

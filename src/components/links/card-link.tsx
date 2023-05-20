@@ -1,5 +1,5 @@
 import { ArrowIcon } from '@/components/icons'
-import { ButtonProps } from '@/lib/interfaces'
+import { ButtonProps } from '@/utils/interfaces'
 
 export function CardLink({ href, children }: ButtonProps) {
   return (

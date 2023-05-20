@@ -1,5 +1,5 @@
 import './globals.css'
-import { description, siteUrl, title } from '@/lib/info'
+import { description, siteUrl, title } from '@/utils/info'
 import { Metadata } from 'next'
 import GoogleAnalytics from '@/components/google-analytics'
 import MainLayout from '@/components/main-layout'

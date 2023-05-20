@@ -1,7 +1,7 @@
 'use client'
 
 import { Analytics } from '@vercel/analytics/react'
-import { MainLayoutProps } from '@/lib/interfaces'
+import { MainLayoutProps } from '@/utils/interfaces'
 import { useEffect, useState } from 'react'
 import { useSystemColorMode } from '@/hooks/useSystemColorMode'
 import Aside from '@/components/aside'

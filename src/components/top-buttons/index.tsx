@@ -1,4 +1,4 @@
-import { DarkModeProps } from '@/lib/interfaces'
+import { DarkModeProps } from '@/utils/interfaces'
 import { EmailIcon, GitHubIcon, LinkedinIcon } from '@/components/icons'
 import ToggleTheme from '@/components/toggle-theme'
 import TopLink from '@/components/links/top-link'

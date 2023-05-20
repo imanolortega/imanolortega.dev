@@ -1,4 +1,4 @@
-import { siteUrl } from '@/lib/info'
+import { siteUrl } from '@/utils/info'
 
 export default async function sitemap() {
   const routes = ['', '/about'].map((route) => ({

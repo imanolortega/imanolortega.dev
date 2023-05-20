@@ -1,4 +1,4 @@
-import { name, about, bio } from '@/lib/info'
+import { name, about, bio } from '@/utils/info'
 import Heading from '@/components/heading'
 import Paragraph from '@/components/paragraph'
 

@@ -1,4 +1,4 @@
-import { aboutLinks, interest, introAbout, technologies } from '@/lib/info'
+import { aboutLinks, interest, introAbout, technologies } from '@/utils/info'
 import { CardLink } from '@/components/links/card-link'
 import Heading from '@/components/heading'
 import Paragraph from '@/components/paragraph'

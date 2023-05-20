@@ -1,4 +1,4 @@
-import { TopLinkProps } from '@/lib/interfaces'
+import { TopLinkProps } from '@/utils/interfaces'
 
 export default function TopLink({ children, href, title }: TopLinkProps) {
   return (

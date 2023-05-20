@@ -1,5 +1,5 @@
 import { CardLink } from '@/components/links/card-link'
-import { projects, projectsList } from '@/lib/info'
+import { projects, projectsList } from '@/utils/info'
 import Heading from '@/components/heading'
 import Paragraph from '@/components/paragraph'
 import type { Metadata } from 'next'

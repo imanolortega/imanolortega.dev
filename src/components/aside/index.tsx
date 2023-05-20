@@ -1,7 +1,7 @@
 'use client'
 
-import { avatar, name, navItems } from '@/lib/info'
-import { DarkModeProps } from '@/lib/interfaces'
+import { avatar, name, navItems } from '@/utils/info'
+import { DarkModeProps } from '@/utils/interfaces'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import Image from 'next/image'
