@@ -1,7 +1,10 @@
 import me from '@/app/avatar.jpg'
 import { EmailIcon, GitHubIcon, LinkedinIcon } from '@/components/icons'
 
+export const githubUrl = 'https://github.com/imanolortega'
 export const siteUrl = process.env.URL
+export const linkedinUrl = 'https://www.linkedin.com/in/imanol-ortega-dev/'
+export const email = 'imanolortega.dev@gmail.com'
 export const name = 'Imanol Ortega'
 export const avatar = me
 export const title = 'Imanol Ortega | Front-end Developer'
@@ -91,7 +94,7 @@ export const projectsList = [
   },
   {
     title: 'Last Challenge',
-    link: 'https://challenge-imanolrtega.vercel.app/',
+    link: 'https://challenge-imanolortega.vercel.app/',
   },
   {
     title: 'Facebook Clone',
@@ -103,24 +106,24 @@ export const projectsList = [
   },
   {
     title: 'More Projects',
-    link: 'https://github.com/imanolrtega',
+    link: githubUrl,
   },
 ]
 
 export const aboutLinks = [
   {
     title: 'Email',
-    link: 'mailto:imanolrtega@gmail.com',
+    link: `mailto:${email}`,
     icon: <EmailIcon />,
   },
   {
     title: 'GitHub',
-    link: 'https://github.com/imanolrtega',
+    link: githubUrl,
     icon: <GitHubIcon />,
   },
   {
     title: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/imanol-rtega/',
+    link: linkedinUrl,
     icon: <LinkedinIcon />,
   },
 ]
@@ -138,7 +141,7 @@ export const homeLinks = [
   },
   {
     text: 'send me an email',
-    link: 'mailto:imanolrtega@gmail.com',
+    link: `mailto:${email}`,
     type: 'external',
   },
 ]
