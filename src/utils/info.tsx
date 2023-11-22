@@ -85,6 +85,14 @@ export const projects = () => {
 
 export const projectsList = [
   {
+    title: 'Stablears',
+    link: 'https://stablears.vercel.app',
+  },
+  {
+    title: 'Noticias de Madryn',
+    link: 'https://noticiasdemadryn.com',
+  },
+  {
     title: 'Más Canales',
     link: 'https://mascanales.net/',
   },
