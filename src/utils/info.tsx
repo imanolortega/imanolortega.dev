@@ -85,16 +85,16 @@ export const projects = () => {
 
 export const projectsList = [
   {
+    title: 'MacOS Dock',
+    link: 'https://mac-dock.vercel.app/',
+  },
+  {
     title: 'Stablears',
     link: 'https://stablears.vercel.app',
   },
   {
     title: 'Más Canales',
     link: 'https://mascanales.net/',
-  },
-  {
-    title: 'MacOS Dock',
-    link: 'https://mac-dock.vercel.app/',
   },
   {
     title: 'Last Challenge',

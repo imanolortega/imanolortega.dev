@@ -1,6 +1,7 @@
 import './globals.css'
 import { description, siteUrl, title } from '@/utils/info'
 import { Metadata } from 'next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import GoogleAnalytics from '@/components/google-analytics'
 import MainLayout from '@/components/main-layout'
 
@@ -58,6 +59,7 @@ export default function RootLayout({
         />
       </head>
       <GoogleAnalytics />
+      <SpeedInsights />
       <body className="antialiased max-w-4xl mb-40 flex flex-col md:flex-row mx-4 mt-8 md:mt-20 lg:mt-32 lg:mx-auto">
         <MainLayout>{children}</MainLayout>
       </body>
