@@ -109,6 +109,10 @@ export const projectsList = [
     link: 'https://covid-tracker-vue.vercel.app/',
   },
   {
+    title: 'ReactJS Tetris',
+    link: 'https://tetris-reactjs.vercel.app/',
+  },
+  {
     title: 'More Projects',
     link: githubUrl,
   },
