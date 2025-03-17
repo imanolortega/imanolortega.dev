@@ -4,12 +4,12 @@ import { EmailIcon, GitHubIcon, LinkedinIcon } from '@/components/icons'
 export const githubUrl = 'https://github.com/imanolortega'
 export const siteUrl = process.env.URL
 export const linkedinUrl = 'https://www.linkedin.com/in/imanol-ortega-dev/'
-export const email = 'imanolortega.dev@gmail.com'
+export const email = 'contacto@imanolortega.com'
 export const name = 'Imanol Ortega'
 export const avatar = me
 export const title = 'Imanol Ortega | Front-end Developer'
 export const description =
-  'I am a Front-end Developer and designer based in Puerto Madryn, Argentina. I mainly work with NextJS, TypeScript and SCSS. My focus today is on the user experience: fast, intuitive and accessible websites.'
+  'I am a Front-end Developer and designer based in Chubut, Argentina. I mainly work with NextJS, TypeScript and SCSS. My focus today is on the user experience: fast, intuitive and accessible websites.'
 
 export const about = () => {
   return (
@@ -57,7 +57,7 @@ export const introAbout = () => {
   return (
     <>
       I&rsquo;m a Front-end Developer obsessed with the web. Currently, I live
-      in Puerto Madryn, Argentina.
+      in Chubut, Argentina.
     </>
   )
 }
@@ -65,7 +65,7 @@ export const introAbout = () => {
 export const interest = () => {
   return (
     <>
-      I have a wide range of interests, including design, marketing, music,
+      I have a wide range of interests, including design, marketing, photography, music,
       history, politics, and much more. Passionate about coding and the web,
       I&rsquo;m always eager to learn the latest trends in the industry.
     </>
@@ -94,10 +94,14 @@ export const projectsList = [
   },
   {
     title: 'Más Canales',
-    link: 'https://mascanales.net/',
+    link: 'https://mascanales.vercel.app/',
   },
   {
-    title: 'Last Challenge',
+    title: 'Random Dad Jokes',
+    link: 'https://gcs-challenge.vercel.app/',
+  },
+  {
+    title: 'Challenge NextJS and Public API',
     link: 'https://challenge-imanolortega.vercel.app/',
   },
   {
