@@ -101,7 +101,7 @@ export const projectsList = [
     link: 'https://gcs-challenge.vercel.app/',
   },
   {
-    title: 'Challenge NextJS and Public API',
+    title: 'Challenge NextJS',
     link: 'https://challenge-imanolortega.vercel.app/',
   },
   {
