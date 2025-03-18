@@ -56,8 +56,7 @@ export const technologies = () => {
 export const introAbout = () => {
   return (
     <>
-      I&rsquo;m a Front-end Developer obsessed with the web. Currently, I live
-      in Chubut, Argentina.
+      I&rsquo;m a Front-end Developer obsessed with the web.
     </>
   )
 }
