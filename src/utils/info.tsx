@@ -84,16 +84,20 @@ export const projects = () => {
 
 export const projectsList = [
   {
+    title: 'Audeas',
+    link: 'https://www.audeas.com.ar/',
+  },
+  {
+    title: 'Travel Web',
+    link: 'https://www.imanolortega.com/',
+  },
+  {
+    title: 'Wedding Web',
+    link: 'https://www.theboda.top/',
+  },
+  {
     title: 'MacOS Dock',
     link: 'https://mac-dock.vercel.app/',
-  },
-  {
-    title: 'Stablears',
-    link: 'https://stablears.vercel.app',
-  },
-  {
-    title: 'Más Canales',
-    link: 'https://mascanales.vercel.app/',
   },
   {
     title: 'Random Dad Jokes',
@@ -102,14 +106,6 @@ export const projectsList = [
   {
     title: 'Challenge NextJS',
     link: 'https://challenge-imanolortega.vercel.app/',
-  },
-  {
-    title: 'Facebook Clone',
-    link: 'https://clone-sepia.vercel.app/',
-  },
-  {
-    title: 'Covid Tracker',
-    link: 'https://covid-tracker-vue.vercel.app/',
   },
   {
     title: 'ReactJS Tetris',
