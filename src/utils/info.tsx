@@ -89,7 +89,7 @@ export const projectsList = [
   },
   {
     title: 'Travel Web',
-    link: 'https://www.imanolortega.com/',
+    link: 'https://ioc-travel-web.vercel.app/',
   },
   {
     title: 'Wedding Web',
